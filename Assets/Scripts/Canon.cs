@@ -8,7 +8,8 @@ public class Canon : MonoBehaviour
     [SerializeField] private Rigidbody2D _bulletPrefab;
     [SerializeField] private Transform _shootPosition;
     [SerializeField] private float _shootDelay = 1.5f;
-
+    [SerializeField] private float _shootForse = 6;
+    
     private void Start()
     {
         StartCoroutine(ShootLoop());
@@ -26,6 +27,6 @@ public class Canon : MonoBehaviour
     private void Shoot()
     {
         Rigidbody2D bullet = Instantiate(_bulletPrefab, _shootPosition.position, quaternion.identity);
-        bullet.AddForce(transform.TransformDirection(Vector2.right) * 5, ForceMode2D.Impulse);
+        bullet.AddForce(transform.TransformDirection(Vector2.right) * _shootForse, ForceMode2D.Impulse);
     }
 }
