@@ -216,7 +216,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletPrefab: {fileID: 4040222042656871440, guid: d6f99096fabb1244c9c09cebddde7c43, type: 3}
   _shootPosition: {fileID: 1873479519}
-  _shootDelay: 2
+  _shootDelay: 1.5
+  _shootForse: 6
 --- !u!114 &563777465
 MonoBehaviour:
   m_ObjectHideFlags: 0

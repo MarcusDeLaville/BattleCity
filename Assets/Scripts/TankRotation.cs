@@ -15,15 +15,12 @@ public class TankRotation : MonoBehaviour
         _movement = GetComponent<Movement>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        // if (_movement.MoveDirection.magnitude != 0)
-        // {
-            if (_movement.MoveDirection != _currentDirection)
-            {
-                Rotate(_movement.MoveDirection);
-            }
-        // }
+        if (_movement.MoveDirection != _currentDirection)
+        {
+            Rotate(_movement.MoveDirection);
+        }
     }
 
     private void Rotate(Vector2 direction)
