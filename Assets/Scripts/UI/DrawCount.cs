@@ -3,10 +3,10 @@ using UnityEngine.UI;
 
 public class DrawCount : MonoBehaviour
 {
-    [SerializeField] protected Text _targetText;
+    [SerializeField] protected Text TargetText;
 
     protected void Draw(int count)
     {
-        _targetText.text = count.ToString();
+        TargetText.text = count.ToString();
     }
 }

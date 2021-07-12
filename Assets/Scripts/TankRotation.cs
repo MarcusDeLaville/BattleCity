@@ -17,9 +17,9 @@ public class TankRotation : MonoBehaviour
 
     private void Update()
     {
-        if (_movement.MoveDirection != _currentDirection)
+        if (_movement.MovementDirection != _currentDirection)
         {
-            Rotate(_movement.MoveDirection);
+            Rotate(_movement.MovementDirection);
         }
     }
 

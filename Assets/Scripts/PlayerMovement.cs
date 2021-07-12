@@ -7,8 +7,8 @@ public class PlayerMovement : Movement
         float inputHorizontal = Input.GetAxis("Horizontal");
         float inputVertical = Input.GetAxis("Vertical");
 
-        _moveDirection = new Vector2(inputHorizontal, inputVertical);
+        MoveDirection = new Vector2(inputHorizontal, inputVertical);
         
-        _rigidbody.MovePosition(_rigidbody.position + _moveDirection * _moveSpeed * Time.fixedDeltaTime);
+        Rigidbody.MovePosition(Rigidbody.position + MoveDirection * MoveSpeed * Time.fixedDeltaTime);
     }
 }

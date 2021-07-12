@@ -14,11 +14,11 @@ public class EnemyMovement : Movement
 
     private void FixedUpdate()
     {
-        _rigidbody.MovePosition(_rigidbody.position + _moveDirection * _moveSpeed * Time.fixedDeltaTime);
+        Rigidbody.MovePosition(Rigidbody.position + MoveDirection * MoveSpeed * Time.fixedDeltaTime);
     }
 
     private void ChangeDirection()
     {
-        _moveDirection = _directions[Random.Range(0, _directions.Length)];
+        MoveDirection = _directions[Random.Range(0, _directions.Length)];
     }
 }
